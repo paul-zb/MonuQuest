@@ -1,0 +1,344 @@
+/* Reset et style global */
+body { font-family: 'Segoe UI', sans-serif; background-color: #f4f7f6; margin: 0; color: #333;  }
+
+/* En-tête */
+.header-simple h1 { margin: 0; font-size: 24px; }
+.nav-simple { margin: 15px 0; }
+.nav-simple a { margin-right: 20px; color: #bdc3c7; text-decoration: none; font-weight: bold; }
+.nav-simple a:hover, .nav-simple a.active { color: #fff; border-bottom: 2px solid #3498db; }
+
+/* Layout principal */
+.main-container { display: flex; gap: 20px; padding: 20px 40px; max-width: 1400px; margin: 0 auto; }
+
+/* Sidebar gauche */
+.sidebar-gauche { width: 300px; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.barre-progres { width: 100%; height: 12px; background: #eee; border-radius: 6px; margin: 10px 0; overflow: hidden; }
+.barre-progres-fill { height: 100%; background: #27ae60; }
+
+/* Zone de contenu droit (Carte ou Tableaux) */
+.content-area { flex-grow: 1; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+
+/* Tableaux */
+table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+th { background: #f8f9fa; }
+
+/* Structure générale */
+.main-interface { max-width: 1200px; margin: 0 auto; padding: 20px; }
+.full-content-layout { display: flex; gap: 20px; }
+
+/* Sidebar (Progression + Navigation) */
+.sidebar-full { width: 300px; flex-shrink: 0; background: #fff; padding: 20px; border: 1px solid #ddd; border-radius: 8px; }
+
+/* Zone de contenu */
+.tab-content { flex-grow: 1; background: #fff; padding: 20px; border: 1px solid #ddd; border-radius: 8px; }
+
+/* Styles du tableau (généré par mkTable) */
+table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+th { background: #f8f9fa; padding: 12px; border: 1px solid #dee2e6; text-align: left; }
+td { padding: 10px; border: 1px solid #dee2e6; }
+tr:nth-child(even) { background-color: #fcfcfc; }
+
+/* Navigation */
+.tabs-nav { margin: 20px 0; border-top: 1px solid #eee; padding-top: 15px; }
+.tab-link { display: block; padding: 8px 0; color: #34495e; text-decoration: none; font-weight: bold; }
+.tab-link.active { color: #3498db; }
+
+/* Container du formulaire */
+.form-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* Groupe de champ (Label + Input) */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #444;
+}
+
+/* Style des inputs */
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Important pour que le padding ne dépasse pas la largeur */
+    font-size: 15px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+/* Bouton stylisé */
+.btn-submit {
+    background-color: #27ae60;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #219150;
+}
+
+/* Assurer que la carte occupe bien tout l'espace */
+.map-view { position: relative; height: 500px; } 
+
+/* Style des inputs dans la sidebar */
+.sidebar .form-group input { width: 100%; padding: 8px; margin-top: 5px; }
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-end; /* pousse à droite */
+    align-items: center;
+
+    padding: 10px 20px;
+    gap: 10px; /* espace entre phrase et bouton */
+}
+
+.header-simple {
+    background: #2c3e50;
+    color: white;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.header-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.header-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-logout {
+    background-color: #e74c3c !important;
+    color: white !important;
+    padding: 6px 12px;
+    border-radius: 5px;
+    text-decoration: none !important;
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.3s;
+}
+
+.btn-logout:hover {
+    background-color: #c0392b !important;
+}
+
+/* ---- Admin specifique ---- */
+.admin-wrap        { max-width: 1300px; margin: 0 auto; padding: 20px 40px; }
+.admin-header      { display:flex; align-items:center; justify-content:space-between; margin-bottom:1.5rem; }
+.admin-header h1   { font-size:1.6rem; color:#2c3e50; }
+.admin-badge       { background:#e74c3c; color:white; font-size:0.75rem; font-weight:700;
+                     padding:4px 10px; border-radius:20px; letter-spacing:.05em; }
+.admin-grid        { display:grid; grid-template-columns: 380px 1fr; gap:20px; align-items:start; }
+
+/* Formulaire ajout */
+.admin-card        { background:white; border:1px solid #ddd; border-radius:8px; padding:20px; }
+.admin-card h2     { font-size:1rem; color:#2c3e50; margin-bottom:1rem; border-bottom:2px solid #3498db;
+                     padding-bottom:8px; }
+.admin-map         { height:220px; border-radius:6px; overflow:hidden; margin-bottom:1rem; }
+.form-row          { display:flex; gap:10px; }
+.form-row .form-group { flex:1; }
+
+/* Message flash */
+.flash             { padding:10px 14px; border-radius:6px; margin-bottom:1rem; font-size:0.88rem; }
+.flash.success     { background:#eafaf1; border:1px solid #27ae60; color:#1e8449; }
+.flash.error       { background:#fdedec; border:1px solid #e74c3c; color:#c0392b; }
+
+/* Tableau monuments */
+.admin-table-wrap  { background:white; border:1px solid #ddd; border-radius:8px; padding:20px; }
+.admin-table-wrap h2 { font-size:1rem; color:#2c3e50; margin-bottom:1rem; border-bottom:2px solid #e74c3c;
+                       padding-bottom:8px; }
+.search-bar        { width:100%; padding:8px 12px; border:1px solid #ddd; border-radius:6px;
+                     margin-bottom:1rem; font-size:0.9rem; }
+.btn-delete        { background:#e74c3c; color:white; border:none; padding:5px 10px;
+                     border-radius:4px; cursor:pointer; font-size:0.82rem; transition:background .2s; }
+.btn-delete:hover  { background:#c0392b; }
+.btn-edit          { background:#3498db; color:white; border:none; padding:5px 10px;
+                     border-radius:4px; cursor:pointer; font-size:0.82rem; transition:background .2s;
+                     text-decoration:none; display:inline-block; }
+.btn-edit:hover    { background:#2980b9; }
+.cat-badge         { display:inline-block; padding:2px 8px; border-radius:10px; font-size:0.75rem;
+                     background:#eaf4fd; color:#2980b9; border:1px solid #aed6f1; }
+.count-badge       { font-size:0.8rem; color:#888; margin-left:6px; }
+
+/* Reset et style global */
+body { font-family: 'Segoe UI', sans-serif; background-color: #f4f7f6; margin: 0; color: #333;  }
+
+/* En-tête */
+.header-simple { background: #2c3e50; color: white; padding: 20px 40px; }
+.header-simple h1 { margin: 0; font-size: 24px; }
+.nav-simple { margin: 15px 0; }
+.nav-simple a { margin-right: 20px; color: #bdc3c7; text-decoration: none; font-weight: bold; }
+.nav-simple a:hover, .nav-simple a.active { color: #fff; border-bottom: 2px solid #3498db; }
+
+/* Layout principal */
+.main-container { display: flex; gap: 20px; padding: 20px 40px; max-width: 1400px; margin: 0 auto; }
+
+/* Sidebar gauche */
+.sidebar-gauche { width: 300px; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.barre-progres { width: 100%; height: 12px; background: #eee; border-radius: 6px; margin: 10px 0; overflow: hidden; }
+.barre-progres-fill { height: 100%; background: #27ae60; }
+
+/* Zone de contenu droit (Carte ou Tableaux) */
+.content-area { flex-grow: 1; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+
+/* Tableaux */
+table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+th { background: #f8f9fa; }
+
+/* Structure générale */
+.main-interface { max-width: 1200px; margin: 0 auto; padding: 20px; }
+.full-content-layout { display: flex; gap: 20px; }
+
+/* Sidebar (Progression + Navigation) */
+.sidebar-full { width: 300px; flex-shrink: 0; background: #fff; padding: 20px; border: 1px solid #ddd; border-radius: 8px; }
+
+/* Zone de contenu */
+.tab-content { flex-grow: 1; background: #fff; padding: 20px; border: 1px solid #ddd; border-radius: 8px; }
+
+/* Styles du tableau (généré par mkTable) */
+table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+th { background: #f8f9fa; padding: 12px; border: 1px solid #dee2e6; text-align: left; }
+td { padding: 10px; border: 1px solid #dee2e6; }
+tr:nth-child(even) { background-color: #fcfcfc; }
+
+/* Navigation */
+.tabs-nav { margin: 20px 0; border-top: 1px solid #eee; padding-top: 15px; }
+.tab-link { display: block; padding: 8px 0; color: #34495e; text-decoration: none; font-weight: bold; }
+.tab-link.active { color: #3498db; }
+
+/* Container du formulaire */
+.form-card {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* Groupe de champ (Label + Input) */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #444;
+}
+
+/* Style des inputs */
+.form-group input, 
+.form-group select, 
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Important pour que le padding ne dépasse pas la largeur */
+    font-size: 15px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+/* Bouton stylisé */
+.btn-submit {
+    background-color: #27ae60;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #219150;
+}
+
+/* Assurer que la carte occupe bien tout l'espace */
+.map-view { position: relative; height: 500px; } 
+
+/* Style des inputs dans la sidebar */
+.sidebar .form-group input { width: 100%; padding: 8px; margin-top: 5px; }
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-end; /* pousse à droite */
+    align-items: center;
+
+    padding: 10px 20px;
+    gap: 10px; /* espace entre phrase et bouton */
+}
+/* =============================================
+   ADMIN
+   ============================================= */
+.admin-wrap          { max-width: 1300px; margin: 0 auto; padding: 20px 40px; }
+.admin-header        { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.5rem; }
+.admin-header h1     { font-size: 1.4rem; color: #333; }
+.admin-badge         { background: #c0392b; color: white; font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 4px; }
+.admin-grid          { display: grid; grid-template-columns: 360px 1fr; gap: 20px; align-items: start; }
+.admin-card          { background: white; border: 1px solid #ddd; border-radius: 6px; padding: 20px; }
+.admin-card h2       { font-size: 1rem; color: #333; margin-bottom: 1rem; border-bottom: 1px solid #ddd; padding-bottom: 8px; }
+.admin-card h2 small { color: #888; font-weight: normal; font-size: 0.85rem; }
+.form-row            { display: flex; gap: 10px; }
+.form-row .form-group { flex: 1; }
+.flash               { padding: 10px 14px; border-radius: 4px; margin-bottom: 1rem; font-size: 0.88rem; }
+.flash.success       { background: #f0faf4; border: 1px solid #27ae60; color: #1e8449; }
+.flash.error         { background: #fdf3f2; border: 1px solid #c0392b; color: #c0392b; }
+.btn-delete          { background: #c0392b; color: white; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; font-size: 0.82rem; }
+.btn-delete:hover    { background: #a93226; }

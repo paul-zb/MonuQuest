@@ -1,0 +1,33 @@
+Monu Quest — Fichier d'installation
+Fichier d'installation pour héberger le site web local : Monu Quest
+
+Postulat : Nous partirons du principe que vous disposez d'Apache2 et d'un système d'informations fonctionnels, ainsi que de vos identifiants pour accéder à PhpMyAdmin (http://localhost/phpmyadmin/).
+
+
+1. Importer la base de données
+Pour importer la BDD dans votre système d'informations, veuillez suivre ces étapes dans l'ordre :
+
+ - Récupérer le fichier .sql nommé monuquest.sql
+ - Ouvrir votre navigateur et aller à l'adresse : http://localhost/phpmyadmin/
+ - Se connecter avec vos identifiants
+ - Créer une base de données nommée monuquest
+ - Cliquer sur Importer et choisir le fichier monuquest.sql
+ - Cliquer sur Exécuter
+
+Normalement, tout devrait fonctionner.
+
+
+
+2. Héberger le site web
+
+ - Récupérer l'archive et la décompresser
+ - Déposer le dossier dans le répertoire suivant :
+
+ - Linux Ubuntu : /var/www/html
+
+ - Ouvrir le fichier config.php situé dans le répertoire libs de l'archive
+ - Insérer vos identifiants de PhpMyAdmin
+ - Ouvrir votre navigateur et aller à l'adresse : http://localhost
+ - Cliquer sur le dossier contenant les fichiers du projet
+
+Normalement, tout devrait fonctionner.
